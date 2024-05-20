@@ -1,0 +1,41 @@
+/* styles.css */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+/* Add this style to the div containing the table. Needed for horizontal scroll */
+.table-container {
+    overflow-x: auto;
+    max-height: 95vh; /* Set a maximum height for floating header */
+}
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#table-container {
+    height: 400px;
+    overflow: auto;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.sticky-header th {
+    cursor: pointer;
+}
+
+.sticky-header th:hover {
+    background-color: #f2f2f2;
+}
