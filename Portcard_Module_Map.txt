@@ -1,4 +1,4 @@
-# Portcard 		 FEC 	 tkFEC 		 ring 	 ccu 	 channel 	 Module 			 POH 	 module_channel 	 FED
+# Portcard 		 FEC 	 tkFEC 		 ring 	 ccu 	 I2C_channel 	 Module 			 POH 	 module_channel 	 FED
 BPix_BmO_SEC1_PRT1 	 6 	 tkfec2 	 0x2 	 0x77 	 0x11 	 BPix_BmO_SEC1_LYR1_LDR1H_MOD2		 A1 	 3 			 1260
 BPix_BmO_SEC1_PRT1 	 6 	 tkfec2 	 0x2 	 0x77 	 0x11 	 BPix_BmO_SEC1_LYR1_LDR1H_MOD2		 A2 	 3 			 1260
 BPix_BmO_SEC1_PRT1 	 6 	 tkfec2 	 0x2 	 0x77 	 0x11 	 BPix_BmO_SEC1_LYR1_LDR1H_MOD2		 B1 	 4 			 1260
