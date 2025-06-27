@@ -24,9 +24,19 @@ async function fetchData(datafile) {
         const data = await response.text();
         clearTable();
         const lines = data.trim().split('\n');
-        const headers = lines[0].split(/\s+/);    
-        allData = lines.slice(1).map(line => line.split(/\s+/));// seperate by space
+        const headers = lines[0].split(/\s+/);
 
+		// Swap POH and module_channel only if this is Portcard_Module_Map.txt
+		if (datafile === 'Portcard_Module_Map.txt') {
+			const pohIndex = headers.indexOf('POH');
+			const moduleChannelIndex = headers.indexOf('module_channel');
+			if (pohIndex !== -1 && moduleChannelIndex !== -1) {
+				// Swap headers
+				[headers[pohIndex], headers[moduleChannelIndex]] = [headers[moduleChannelIndex], headers[pohIndex]];
+			}
+		}
+
+		allData = lines.slice(1).map(line => line.split(/\s+/));
         console.log('Headers:', headers);  // Debugging: Log headers
 
         // Create header and search row
